@@ -37,6 +37,12 @@ software architecture.
 
 : Keyword from the CPSA-Advanced curriculum "IMPROVE".
 
+>The following terms will be included: Modification, Evolution, Maintenance, Improvement, Problem, Issue, Risk,
+>Cost (of issue), Cost (of change), Cost (categories), Cause, Effect, Opportunity (for improvement), Root cause, Symptom
+>Refactoring, Re-Write, Re-Architecting, Reengineering, Solution approach, SWOT-Analysis,
+>Code analysis, Static code analysis, Runtime analysis, Return-on-Invest (ROI), Run-the-Company-Cost,
+>Develop-the-Company-Cost (aka build-the-company-cost), Effort, Estimation, Confidentiality interval, Worst-case estimation,
+>Best-case estimation, Average-case estimation, Interval-based estimation, Synergy effect
 
 **Metric**
 
