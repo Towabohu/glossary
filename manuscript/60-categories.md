@@ -46,9 +46,9 @@ coupling, mean-time-between-failure)
 
 **Security**
 
-: Measures to reach basic principles like confidentiality, integrity, availability and non-repudation for data in an IT-system.
+: Measures to reach basic principles like confidentiality, integrity, availability and non-repudiation for data in an IT-system.
 
 **ISO-IEC-IEEE-42010**
 
-: ISO/IEC/IEEE 42010:2011 Systems and software engineering — Architecture description.
+: ISO/IEC/IEEE 42010: 2011 Systems and software engineering - Architecture description.
 Note, a new version of the standard is expected to be published till the end of 2016.
