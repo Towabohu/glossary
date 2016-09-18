@@ -37,6 +37,12 @@ software architecture.
 
 : Keyword from the CPSA-Advanced curriculum "IMPROVE".
 
+>The following terms will be included: Modification, Evolution, Maintenance, Improvement, Problem, Issue, Risk,
+>Cost (of issue), Cost (of change), Cost (categories), Cause, Effect, Opportunity (for improvement), Root cause, Symptom
+>Refactoring, Re-Write, Re-Architecting, Reengineering, Solution approach, SWOT-Analysis,
+>Code analysis, Static code analysis, Runtime analysis, Return-on-Invest (ROI), Run-the-Company-Cost,
+>Develop-the-Company-Cost (aka build-the-company-cost), Effort, Estimation, Confidentiality interval, Worst-case estimation,
+>Best-case estimation, Average-case estimation, Interval-based estimation, Synergy effect
 
 **Metric**
 
@@ -46,9 +52,9 @@ coupling, mean-time-between-failure)
 
 **Security**
 
-: Measures to reach basic principles like confidentiality, integrity, availability and non-repudation for data in an IT-system.
+: Measures to reach basic principles like confidentiality, integrity, availability and non-repudiation for data in an IT-system.
 
 **ISO-IEC-IEEE-42010**
 
-: ISO/IEC/IEEE 42010:2011 Systems and software engineering — Architecture description.
+: ISO/IEC/IEEE 42010: 2011 Systems and software engineering - Architecture description.
 Note, a new version of the standard is expected to be published till the end of 2016.
