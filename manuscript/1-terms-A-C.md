@@ -3,6 +3,14 @@
 {#glossary}
 # Glossary of Terms
 
+{#term-abstraction}
+### Abstraction
+
+A view of an element that focuses on the information relevant to a particular purpose and ignores the remainder of the information.
+
+Category: Design-Principle
+
+
 {#term-abstractness}
 ### Abstractness
 
@@ -10,6 +18,18 @@ Metric for the source code of object oriented systems: The number of abstract ty
 (interfaces and abstract classes) divided by the total number of types.
 
 Category: Metric
+
+{#term-acl}
+### ACL
+Access Control Lists are a way to organize and store permissions of
+an [principal](#term-principal) for a specific entity. Beside implementations
+on an application level a typical example for an ACL is the management of file
+permissions on unix based operating systems.
+
+Since ACLs don't scale well on a large base it is common to model access
+control based on roles ([RBAC](#term-rbac)).
+
+Category: Security
 
 {#term-adapter}
 ### Adapter
@@ -34,13 +54,6 @@ When the element is destroyed, the contained elements
 remain intact.
 
 Category: Foundation
-
-{#term-algorithm}
-### Algorithm
-
-* (noun) Term used by software developers when they
-do not want to explain what they did.
-* A self-contained step-by-step set of operations to be performed, e.g. to perform calculations, data processing, and/or similar tasks.
 
 
 {#term-appropriateness}
@@ -67,7 +80,8 @@ Category: ISO-IEC-IEEE-42010
 
 {#term-architectural-decision}
 ### Architectural Decision
-Decision, which has an sustainable or essential effect on structures, concepts, implementations or similar.
+Decision, which has an sustainable or essential effect on the architecture.
+
 Example: Decision about database technology or technical basics of the user interface.
 
 Following ISO/IEC/IEEE 42010 an architectural decision pertain to system concerns. However, there is often no simple mapping between the two. A decision can affect the architecture in several ways. These can be reflected in the architecture description (as defined in ISO/IEC/IEEE 42010).
@@ -117,11 +131,11 @@ See [Assessment](#term-assessment)
 
 Conventions, principles and practices for the description of architectures established within a specific domain of application and/or community of stakeholders (as defined in ISO/IEC/IEEE 42010).
 
-Examples are: 
+Examples are:
 
-* Generalised Enterprise Reference Architecture and Methodologies (GERAM) [ISO 15704] is an architecture framework. 
+* Generalised Enterprise Reference Architecture and Methodologies (GERAM) [ISO 15704] is an architecture framework.
 
-* Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746] is an architecture framework. 
+* Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746] is an architecture framework.
 
 
 Category: ISO-IEC-IEEE-42010
@@ -131,9 +145,14 @@ Category: ISO-IEC-IEEE-42010
 {#term-architecture-goal}
 ### Architecture goal
 
-(syn: quality goal, quality requirement): A quality attribute that the system need
-to achieve. These goals often have _long term character_ in contrast to (short term)
-project goals.
+
+(syn: Architectural quality goal, Architectural quality requirement): A quality attribute that the system
+needs to achieve and the quality attribute is understood to be an architectural issue.
+
+Hence, the architecture needs to be designed in a way to fullfill this architectural goal. These goals often have _long term character_ in contrast to (short term) project goals.
+
+Category: Fundamental
+
 
 {#term-architecture-model}
 ### Architecture model
@@ -159,6 +178,13 @@ Examples include:
 * Layers
 * Pipes-and-Filter
 * [CQRS](#term-cqrs)
+
+
+{#term-architecture-quality-requirement}
+### Architecture quality requirement
+
+See [architecture goal](#term-architecture-goal).
+
 
 
 {#term-architecture-rational}
@@ -244,6 +270,22 @@ See [coupling](#term-coupling), [dependency](#term-dependency) and
 Category: Foundation
 
 
+{#term-asymmetric-cryptography}
+### Asymmetric Cryptography
+
+Asymmetric cryptography algorithms are designed that the key which is used for
+encryption is different from the key used for decryption. The key for
+encryption is called "public-key" the key for decryption is called
+"private-key". The public key can be published and used by anyone to encrypt
+information only readable by the party owning the private-key for decryption.
+See [Schneier, Public-Key Algorithms, page 17](#ref-schneier-1996).
+
+Asymmetric cryptography is fundamental for [PKI](#term-pki) and digital
+signatures.
+
+Category: Security
+
+
 {#term-atam}
 ### ATAM
 
@@ -265,7 +307,37 @@ assigning additional attributes to each node. Examples could be the estimated
 costs of an attack or if an attack approach is possible or not by referencing
 countermeasures.
 
-See [Bruce Schneier on "Modeling security threats"](https://www.schneier.com/academic/archives/1999/12/attack_trees.html). 
+See [Bruce Schneier on "Modeling security threats"](https://www.schneier.com/academic/archives/1999/12/attack_trees.html).
+
+Category: Security
+
+
+{#term-authentication}
+### Authentication
+
+Authentication is the process of confirming the claim of an identity by a given
+entity. Usually this is done by verifying at least one of the authentication
+factors which is known by the system:
+
+ * knowledge (e.g. password)
+ * ownership (e.g. security token)
+ * inherence (e.g. biometrics)
+
+For a stronger authentication mutiple factors can be requested or at least
+factors of two categories.
+
+Category: Security
+
+
+{#term-authorization}
+### Authorization
+
+"Authorization or authorisation is the function of specifying access rights to
+resources related to information security and computer security in general and
+to access control in particular. More formally, "to authorize" is to define an
+access policy."
+
+(quoted from [Wikipedia](https://en.wikipedia.org/w/index.php?title=Authorization&oldid=739777234))
 
 Category: Security
 
@@ -361,13 +433,29 @@ A blueprint of the enterprise that provides a common understanding
 of the organization and is used to align strategic
 objectives and tactical demands.
 
+
+{#term-ca}
+### CA
+
+A **C**ertificate **Authority** issues digital certificates to a given subject
+in a [PKI](#term-pki). Usually there is a trust established to this authority
+which results in the same trust level to the issued certificates.
+
+An example is the widely used TLS-PKI where every browser includes the
+root-certificates of a defined list of CAs. These CAs then check the identity
+of a given internet domain owner and digitally sign his certificate for the use
+with [TLS](#term-tls).
+
+Category: Security
+
+
 {#term-cardinality}
 ### Cardinality
 Describes the quantitative rating of an association or relationship.
 It specifies the number of participants (objects, instances, modules etc)
 of the association.
 
-{#term-CIA-triad}
+{#term-cia-triad}
 ### CIA Triad
 
 See [Security Goals](#term-security-goals)

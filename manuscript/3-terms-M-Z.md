@@ -1,4 +1,11 @@
-﻿
+﻿{#term-MFA}
+### MFA
+
+For **M**ulti-**F**actor-**A**uthentication see [Authentication](#term-authentication).
+
+Category: Security
+
+
 {#term-microservice}
 ### Microservice
 
@@ -19,9 +26,9 @@ The underlying idea is to generate code from more abstract models of requirement
 {#term-model-kind}
 ### Model kind
 
-Conventions for a type of modelling (as defined in ISO/IEC/IEEE 42010).
+Conventions for a type of modeling (as defined in ISO/IEC/IEEE 42010).
 
-Note, examples of model kinds include data flow diagrams, class diagrams, Petri nets, balance sheets, organization charts and state transition models. 
+Note, examples of model kinds include data flow diagrams, class diagrams, Petri nets, balance sheets, organization charts and state transition models.
 
 Category: ISO-IEC-IEEE-42010
 
@@ -122,6 +129,20 @@ implemented in object oriented languages by interface inheritance,
 in a more general way as _plugins_.
 
 
+{#term-owasp}
+### OWASP
+
+The **O**pen **W**eb **A**pplication **S**ecurity **P**roject is a worldwide
+non-profit online organization founded 2001 for improving the security of
+software. It is a rich source for information and best practices in the field
+of web security. See [https://www.owasp.org/](https://www.owasp.org/).
+
+The OWASP-Top-10 is a frequently referenced list of attack categories based on
+the projects data survey.
+
+Category: Security
+
+
 {#term-pattern}
 ### Pattern
 
@@ -136,7 +157,7 @@ Property of a cryptographic protocol were an attacker can't gain any
 information about short-term session keys by compromising long-term keys.
 
 Examples for protocols with perfect forward secrecy are TLS and OTR. If this
-feature is enabled for TLS and an attacker gains access to a servers private
+feature is enabled for [TLS](#term-tls) and an attacker gains access to a servers private
 key, previously recorded communication sessions can still not be decrypted.
 
 Category: Security
@@ -162,12 +183,11 @@ Architects apply perspectives iteratively to the system's _architectural views_ 
  * Security
  * Usability
 
-
+{term-pikachu}
 ### Pikachu
 A yellowish mouse-like character from the
-(quite famous) [Pokémon world]{https://simple.wikipedia.org/wiki/Pikachu}.
-Actually, you don't need to know that. But it does not hurt either - and you might impress your kids
-with this knowledge...
+(quite famous) [Pokémon world](https://simple.wikipedia.org/wiki/Pikachu).
+Actually, you don't need to know that. But it does not hurt either - and you might impress your kids with this knowledge...
 
 
 {#term-pipe}
@@ -176,6 +196,21 @@ with this knowledge...
 Connector in the pipes-and-filters architectural style that transfers
 streams or chunks of data from the output of one filter to the input
 of another filter without modifying values or order of data.
+
+
+{#term-pki}
+### PKI
+
+Short for **P**ublic-**K**ey-**I**nfrastructure. A concept of managing digital certificates
+usually involving [asymmetric cryptography](#term-asymmetric-cryptography). The
+term "public" refers most of the time to the used type of cryptographic key and
+not necessarily to infrastructure open to a public audience. To prevent
+semantic confusion the terms "open PKI" or "closed PKI" can be used, see
+[Anderson, Chapter 21.4.5.7 PKI, page 672](#ref-anderson-2008).
+
+PKI is usually based on a [CA](#term-ca) or a [Web-of-Trust](#term-web-of-trust).
+
+Category: Security
 
 
 {#term-port}
@@ -192,11 +227,41 @@ with its environment.
 Pattern-oriented Software Architecture. Series of books on software architecture
 patterns.
 
+
+{#term-principal}
+### Principal
+
+Principals in a security context are entities which have been authenticated and
+can be assigned permissions to. A principal can be a user but for example also
+other services or a process running on a system. The term is used in the [Java
+environment](https://docs.oracle.com/javase/8/docs/api/java/security/Principal.html)
+and throughout different authentication protocols (see [GSSAPI
+RFC2744](https://tools.ietf.org/html/rfc2744) or [Kerberos
+RFC4121](https://tools.ietf.org/html/rfc4121)).
+
+Category: Security
+
+
 {#term-proxy}
 ### Proxy
 
 (Design pattern) "A wrapper or agent object that is being called by the client to access the real serving object behind the scenes. Use of the proxy can simply be forwarding to the real object, or can provide additional logic. In the proxy extra functionality can be provided, for example caching when operations on the real object are resource intensive, or checking preconditions before operations on the real object are invoked. For the client, usage of a proxy object is similar to using the real object, because both implement the same interface."
 (quoted from [Wikipedia](https://en.wikipedia.org/wiki/Proxy_pattern))
+
+
+{#term-pseudo-randomness}
+#### Pseudo-Randomness
+
+Often used in conjunction with pseudo-random-number-generators. Gathering
+randomness with a high [entropy](#term-entropy) is resource intensive and
+usually not required by many applications, cryptography left aside.
+To address this issue pseudo-random-generators are initialized with a seed of
+data and create random values based on this seed. The data will be generated
+by random, but will always be the same if the generator is initialized with an
+identical seed. This is called pseudo-randomness and is less performance
+intensive.
+
+Category: Security
 
 
 {#term-qualitative-evaluation}
@@ -276,11 +341,30 @@ these tree.
 e.g. [coupling](#term-coupling), cyclomatic complexity, size, test coverage. Metrics like these
 can help to identify critical parts or elements of systems.
 
+{#term-randomness}
+### Randomness
+
+See [Entropy](#term-entropy) or [Pseudo-Randomness](#term-pseudo-randomness).
+
+Category: Security
+
 
 {#term-rationale}
 ### Rationale
 
 Explanation of the reasoning or arguments that lie behind an architecture decision.
+
+
+{#term-rbac}
+### RBAC (Role Based Access Control)
+
+A role is a fixed set of permissions usually assigned to a group of
+[principals](#term-principal). This allows a
+**R**ole-**B**ased-**A**ccess-**C**ontrol usually to be implemented more
+efficient than an [ACL](#term-acl) based system and makes for example deputy
+arrangements possible.
+
+Category: Security
 
 
 {#term-registry}
@@ -332,7 +416,11 @@ for documentation of information systems. Defined in ISO/IEC 10746.
 "Concept of being able to make any kind of change to a model as well as to the code generated from that model. The changes always propagate bidirectional and both artifacts are always consistent." (quoted from
   [Wikipedia](https://en.wikipedia.org/wiki/Model-driven_software_development)).
 
-  In my personal opinion, it does not work in practical situations, only in hello-world-like scenarios.
+D> ###### Comment (Gernot Starke)
+D> In my personal opinion, it does not work in practical situations, only in hello-world-like scenarios, as the inverse abstraction (from low-level sourcecode to higher-level architectural elements) usually involves design-decisions and cannot realistically be automated.
+D>
+D> ###### Comment (Matthias Bohlen)
+D>Recently I have seen code that originated from DDD where reverse engineering did indeed work.
 
 
 {#term-ruby}
@@ -340,6 +428,7 @@ for documentation of information systems. Defined in ISO/IEC 10746.
 
 A wonderful programming language.
 
+Category: Programming
 
 {#term-runtime-view}
 ### Runtime View
@@ -364,6 +453,22 @@ informal manner, yet making the abstract notion of “quality” concrete and ta
   * System (or part of the system) is stimulated by the event.
   * Response: The activity undertaken after the arrival of the stimulus.
   * Metric (response measure): The response should be measurable in some fashion.
+
+
+{#term-sdl}
+### SDL
+
+A **S**ecure-**D**evelopment-**L**ifecycle is a companies usual software
+development process with added best practices of engineering secure software.
+This involves for example code reviews, architectural risk analyses, black/whitebox and
+penetration testing and many more additions.
+The whole lifecycle of an application should be covered by the SDL, beginning
+with the first requirements engineering tasks and ending with feedback from
+operating the released software by fixing security issues.
+
+See [McGraw "An Enterprise Software Security Program", page 239](#ref-mcgraw-2006).
+
+Category: Security
 
 
 {#term-security-goals}
@@ -476,7 +581,7 @@ A>its design and evolution.
 
 The new standard ISO/IEC/IEEE 42010:2011 has adopted and revised the definition as follows:
 
-A>Architecture: (system) fundamental concepts or properties of a system 
+A>Architecture: (system) fundamental concepts or properties of a system
 A>in its environment embodied in its elements, relationships, and in
 A>the principles of its design and evolution.
 
@@ -549,6 +654,16 @@ and their relationships (dependencies).
 see _Building block_ or _Component_
 
 
+{#term-symmetric-cryptography}
+### Symmetric Cryptography
+
+Symmetric cryptography is based on an identical key for encryption and
+decryption of data. Sender and receiver have to agree on a key for
+communication. See [Schneier, Symmetric Algorithms, page 17](#ref-schneier-1996).
+
+Category: Security
+
+
 {#term-system}
 ### System
 
@@ -584,6 +699,22 @@ It can help base other files, especially documents in a predefines
 structure without prescribing the content of these single files.
 
   A well known example of such templates is [arc42](http://arc42.de)
+
+
+{#term-tls}
+### TLS
+
+**T**ransport-**L**ayer-**S**ecurity is a set of protocols to cryptographically
+secure the communication of two partys by the means of the
+[CIA-triad](#term-cia-triad).
+It is widely used for secure communication on the internet and the foundation for HTTPS.
+
+TLS started as an update to its predecessor SSL (Secure Socket Layer) Version
+3.0 and should be used now instead of SSL [see RFC7568 "Deprecating Secure
+Sockets Layer Version 3.0"](https://tools.ietf.org/html/rfc7568).
+
+Category: Security
+
 
 {#term-togaf}
 ### [TOGAF](http://www.opengroup.org/subjectareas/enterprise/togaf)
@@ -639,10 +770,9 @@ A concept of [Domain-Driven Design](#term-DDD): The ubiquitous language is a lan
 Graphical language for visualizing, specifying and
 documenting the artifacts and structures of a software system.
 
-  * For building block views or the context view, use component diagrams, with either components, packages or classes to denote building blocks.
-  * For runtime views, use sequence- or activity diagrams (with swimlanes). Object diagrams can theoretically be used, but are practically not adviced,
-   as they become cluttered even for small scenarios.
-   * For Deployment views, use deployment diagrams with node symbols.
+* For building block views or the context view, use component diagrams, with either components, packages or classes to denote building blocks.
+* For runtime views, use sequence- or activity diagrams (with swimlanes). Object diagrams can theoretically be used, but are practically not adviced, as they become cluttered even for small scenarios.
+* For Deployment views, use deployment diagrams with node symbols.
 
 
 {#term-uses-relationship}
@@ -673,6 +803,21 @@ Development approach "where you gather all the requirements up front, do all nec
   Contrast to _iterative development_
 
 
+{#term-web-of-trust}
+### Web of Trust
+
+Since a single [CA](#term-ca) could be an easy target for an attacker the web
+of trust delegates the establishment of trust to the user. Each user decides
+which other users proof of identity he trusts, usually by verifying a
+fingerprint of a given key. This trust is expressed by signing the key of the
+other user who can then publish it with the additional signature. A third user
+can then verify this signature and decide to trust the identity or not.
+
+The email encryption PGP is an example for a [PKI](#term-pki) based on a web of trust.
+
+Category: Security
+
+
 {#term-whitebox}
 ### Whitebox
 
@@ -689,6 +834,7 @@ Provides an infrastructure for the set-up, performance and monitoring of a defin
 {#term-wrapper}
 ### Wrapper
 
-(syn: Decorator, Adapter) Patterns to abstract away the concrete interface
-or implementation of a component. Attach additional responsibilities to an object dynamically.
-  Depending on the sources, semantics of _wrapper_ differ significantly.
+(syn: Decorator, Adapter, Gateway) Patterns to abstract away the concrete interface or implementation of a component. Attach additional responsibilities to an object dynamically.
+
+D> ###### Comment (Gernot Starke)
+D> The tiny differences found in literature regarding this term often don't matter in real-life. _Wrapping_ a component or building-block shall have a clear semantics within a single software system.  

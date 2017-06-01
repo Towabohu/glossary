@@ -136,6 +136,14 @@ Messaging Solutions_, Addison Wesley, 2003.
 
 A very important book and timeless book for people creating integrated systems.
 
+{#ref-kelly+2009}
+##### Kelly+2009
+Steven Kelly and Risto Pohjonen: _Worst Practices for Domain-Specific Modeling_
+IEEE Software, volume 26, No. 4 July/August 2009, p22-30.
+
+Authors explain several _bad practices_ of domain modeling and give advice how and
+why to avoid those.
+
 {#ref-kruchten-1995}
 ##### Kruchten-1995
 
@@ -150,6 +158,17 @@ IEEE Software, volume 12 (6), pp 45-50, 1995.
 Martin, Robert C:
 _Agile Software Development: Principles, Patterns and Practices_,
 Prentice Hall, 2002
+
+
+{#ref-mcgraw-2006}
+##### McGraw-2006
+
+Garry McGraw, "Software Security - Building Security In", Addison-Wesley 2006
+
+Covering the whole process of software design from a security perspective by
+the means of risk management, code reviews, risk analysis, penetration testing,
+security testing nad abuse case development.
+
 
 {#ref-parnas-1972}
 ##### Parnas-1972
@@ -201,7 +220,7 @@ Presents a set of architectural viewpoints and perspectives.
 {#ref-rmias-2013}
 ##### RMIAS-2013
 
-Yulia Cherdantseva, Jeremy Hilton, A Reference Model of Information Assurance & Security, 2013 Eight International Conference on Availability, Reliability and Security (ARES), DOI: 10.1109/ARES.2013.72 
+Yulia Cherdantseva, Jeremy Hilton, A Reference Model of Information Assurance & Security, 2013 Eight International Conference on Availability, Reliability and Security (ARES), DOI: 10.1109/ARES.2013.72
 , http://users.cs.cf.ac.uk/Y.V.Cherdantseva/RMIAS.pdf
 
 Conference Paper of Yulia Cherdantseva and Jeremy Hilton describing the RMIAS.
@@ -215,6 +234,13 @@ Schmidt, Douglas C/Stal, Michael/Rohnert, Hans/Buschmann, Frank.
 Pattern-Oriented Software Architecture, volume 2:
 _Patterns for Concurrent and Networked Objects,_
 Wiley & Sons, 2000
+
+{#ref-schneier-1996}
+##### Schneier-1996
+
+Bruce Schneier, Applied Cryptography, 2nd Edition 1996, John Wiley & Sons
+
+Comprehensive suervey of modern cryptography.
 
 {#ref-shaw-1996}
 ##### Shaw+1996
