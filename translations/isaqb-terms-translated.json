@@ -124,7 +124,7 @@
    de: ["Kopplung", "Abhängigkeit"]
  },
   { en: "Crosscutting",
-    de: "Querschnittlich"
+    de: ["Querschnittlich", "Übergreifend"]
   },
   { en: "Curriculum"
     de: "Lehrplan"
